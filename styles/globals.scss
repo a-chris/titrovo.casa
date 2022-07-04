@@ -23,6 +23,11 @@ a {
   opacity: 1;
 }
 
+article[class*="transformed"] {
+ max-width: 30em;
+ z-index: 2;
+}
+
 .transformed-1 {
   @media (min-width: $md) {
     transform: translate(140px,20px);

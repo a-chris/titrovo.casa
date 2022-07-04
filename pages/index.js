@@ -47,7 +47,7 @@ export default function Home({ cities }) {
       <main className="container">
         <div className="columns is-desktop py-6" style={{ minHeight: "50em" }}>
           <div className="column is-flex is-flex-direction-column is-justify-content-space-around">
-            <article className="message is-info transformed-1" style={{ maxWidth: "25em" }}>
+            <article className="message is-info transformed-1">
               <div className="message-body">
                 <div className="content">
                   <b>Cos&apos;è? 🤔</b>
@@ -57,7 +57,7 @@ export default function Home({ cities }) {
               </div>
             </article>
 
-            <article className="message is-info transformed-2" style={{ maxWidth: "25em" }}>
+            <article className="message is-info transformed-2">
               <div className="message-body">
                 <div className="content">
                   <b>Come funziona?</b>
@@ -73,7 +73,7 @@ export default function Home({ cities }) {
               </div>
             </article>
 
-            <article className="message is-info transformed-3" style={{ maxWidth: "25em" }}>
+            <article className="message is-info transformed-3">
               <div className="message-body">
                 <div className="content">
                   <b>Da dove arrivano gli annunci?</b>
@@ -83,7 +83,7 @@ export default function Home({ cities }) {
               </div>
             </article>
 
-            <article className="message is-info transformed-4" style={{ maxWidth: "25em" }}>
+            <article className="message is-info transformed-4">
               <div className="message-body">
                 <div className="content">
                   <b>Ogni quanto vengo notificato? 🔔</b>
