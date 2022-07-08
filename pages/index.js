@@ -46,7 +46,7 @@ export default function Home({ cities }) {
 
       <main className="container">
         <div className="columns is-desktop py-6" style={{ minHeight: "50em" }}>
-          <div className="column is-flex is-flex-direction-column is-justify-content-space-around">
+          <div className="landing is-flex is-flex-direction-column is-justify-content-space-around">
             <article className="message is-info transformed-1">
               <div className="message-body">
                 <div className="content">
@@ -95,9 +95,7 @@ export default function Home({ cities }) {
               </div>
             </article>
           </div>
-          <div className="column is-hidden-touch" style={{ position: "relative" }}>
-            <Image src={"/screenshot.webp"} quality={100} alt="screenshot of telegram chat" layout="fill" objectFit="cover" />
-          </div>
+          <Image src={"/screenshot.webp"} quality={100} alt="screenshot of telegram chat" width={800} height={800} layout="intrinsic" objectFit="cover" />
         </div>
 
         <div>
