@@ -51,7 +51,7 @@ export default function Home({ cities }) {
 
       <main className="container">
         <div className="columns is-desktop py-6" style={{ minHeight: "50em" }}>
-          <div className="landing is-flex is-flex-direction-column is-justify-content-space-around">
+          <div className="landing is-flex is-flex-direction-column is-align-items-center">
             <article className="message is-info transformed-1">
               <div className="message-body">
                 <div className="content">
