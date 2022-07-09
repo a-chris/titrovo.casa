@@ -51,7 +51,7 @@ export default function Home({ cities }) {
 
       <main className="container">
         <div className="columns is-desktop py-6" style={{ minHeight: "50em" }}>
-          <div className="landing is-flex is-flex-direction-column is-align-items-center">
+          <div className="landing px-2 is-flex is-flex-direction-column is-align-items-center">
             <article className="message is-info transformed-1">
               <div className="message-body">
                 <div className="content">
@@ -100,7 +100,9 @@ export default function Home({ cities }) {
               </div>
             </article>
           </div>
-          <Image src={"/screenshot.webp"} quality={100} alt="screenshot of telegram chat" width={800} height={800} layout="intrinsic" objectFit="cover" />
+          <div style={{ marginLeft: "auto" }}>
+            <Image src={"/screenshot.webp"} quality={100} alt="screenshot of telegram chat" width={800} height={800} layout="intrinsic" objectFit="cover" />
+          </div>
         </div>
 
         <div>
