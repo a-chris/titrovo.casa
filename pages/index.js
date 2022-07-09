@@ -151,9 +151,9 @@ export default function Home({ cities }) {
             </div>
             <h4>Metri</h4>
             <div className="block is-flex">
-              <input className="block input" type="number" placeholder="mq minimi" name="minMeter" onChange={handleChangeQueryFields}></input>
+              <input className="block input" type="number" placeholder="mq minimi" name="minMeters" onChange={handleChangeQueryFields}></input>
               <div style={{ width: "3em" }} />
-              <input className="block input" type="number" placeholder="mq massimi" name="maxMeter" onChange={handleChangeQueryFields}></input>
+              <input className="block input" type="number" placeholder="mq massimi" name="maxMeters" onChange={handleChangeQueryFields}></input>
             </div>
 
             <h4>Parole chiave</h4>
@@ -162,7 +162,7 @@ export default function Home({ cities }) {
 
             <div className="block has-text-centered py-4">
               {queryString.errors.length > 0 ? (
-                <p>{queryString.errors}</p>
+                <span className="tag is-danger is-light">{queryString.errors}</span>
               ) : (
                 <div className="is-flex is-justify-content-center is-align-items-center">
                   <code className="p-4" style={{ border: "2px solid black" }}>
