@@ -25,8 +25,15 @@ a {
 
 // landing
 
-.landing {
-  
+#landing {
+  min-height: 50em;
+  margin-left: 0;
+  margin-right: 0;
+
+  #message-container {
+    padding: 0 1em;
+  }
+
   article[class*="transformed"] {
     max-width: 30em;
     z-index: 99;

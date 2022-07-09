@@ -4,14 +4,9 @@ import Script from "next/script";
 import { useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { TagsInput } from "react-tag-input-component";
-import { APP_NAME } from "../data/constants";
+import { AD_TYPES, APP_NAME } from "../data/constants";
 import getCities from "../lib/cities";
 import { calculateQuery } from "../lib/query";
-
-const adTypes = [
-  { value: "affitto", label: "Affitto" },
-  { value: "vendita", label: "Vendita" },
-];
 
 export default function Home({ cities }) {
   const [queryFields, setQueryFields] = useState({ city: "roma", adType: "affitto", includeWords: [], excludeWords: [] });
@@ -51,8 +46,8 @@ export default function Home({ cities }) {
       </nav>
 
       <main className="container">
-        <div className="columns is-desktop py-6" style={{ minHeight: "50em" }}>
-          <div className="landing px-2 is-flex is-flex-direction-column is-align-items-center">
+        <div id="landing" className="landing columns is-desktop py-6">
+          <div id="message-container" className="is-flex is-flex-direction-column is-align-items-center">
             <article className="message is-info transformed-1">
               <div className="message-body">
                 <div className="content">
@@ -122,7 +117,7 @@ export default function Home({ cities }) {
               <div style={{ width: "3em" }} />
               <div className="select" style={{ width: "100%" }}>
                 <select name="adType" onChange={handleChangeQueryFields} style={{ width: "100%" }}>
-                  {adTypes.map((t) => (
+                  {AD_TYPES.map((t) => (
                     <option value={t.value} key={t.value}>
                       {t.label}
                     </option>
