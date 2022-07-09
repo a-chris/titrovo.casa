@@ -1,0 +1,41 @@
+@import '../../styles/variables.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  background-color: $input-background-color;
+  border-radius: $radius;
+  padding-left: 0.4em;
+}
+
+.input {
+  
+  &, &:focus, &:hover {
+    border-color: $input-background-color;
+    box-shadow: none;
+  }
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  height: 2em;
+  padding: 0 10px;
+  margin-right: 5px;
+  border-radius: $radius;
+  background-color: $input-tag-background-color;
+  font-size: $input-tag-font-size;
+  white-space: nowrap;
+  color: $input-tag-color;
+}
+
+.tag_button {
+  display: flex;
+  padding: 0 6px;
+  border: none;
+  background-color: unset;
+  cursor: pointer;
+}

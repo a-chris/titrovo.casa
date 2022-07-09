@@ -3,13 +3,18 @@ import Image from "next/image";
 import Script from "next/script";
 import { useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import { TagsInput } from "react-tag-input-component";
+import InputTag from "../components/InputTag";
 import { AD_TYPES, APP_NAME } from "../data/constants";
 import getCities from "../lib/cities";
 import { calculateQuery } from "../lib/query";
 
 export default function Home({ cities }) {
-  const [queryFields, setQueryFields] = useState({ city: "roma", adType: "affitto", includeWords: [], excludeWords: [] });
+  const [queryFields, setQueryFields] = useState({
+    city: "roma",
+    adType: "affitto",
+    includeWords: [],
+    excludeWords: [],
+  });
 
   const handleChangeQueryFields = (e) => {
     const { name, value } = e.target;
@@ -31,7 +36,10 @@ export default function Home({ cities }) {
       <Head>
         <title>{APP_NAME} 🏡</title>
         <meta name="description" content={APP_NAME} />
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏡</text></svg>"></link>
+        <link
+          rel="icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏡</text></svg>"
+        ></link>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css?family=Open%20Sans:400|Open%20Sans:400&display=swap" rel="stylesheet"></link>
@@ -68,7 +76,8 @@ export default function Home({ cities }) {
                     <a target="_blank" rel="noreferrer" href={"https://t.me/house_finder_italy_bot"}>
                       Bot Telegram
                     </a>{" "}
-                    inserisci i filtri di prezzo, metri, parole chiave e voilà! Riceverai una notifica su Telegram ogni volta che un annuncio viene pubblicato 🥰
+                    inserisci i filtri di prezzo, metri, parole chiave e voilà! Riceverai una notifica su Telegram ogni volta che un annuncio viene
+                    pubblicato 🥰
                   </p>
                 </div>
               </div>
@@ -90,14 +99,23 @@ export default function Home({ cities }) {
                   <b>Ogni quanto vengo notificato? 🔔</b>
                   <br />
                   <p>
-                    Il nostro servizio controlla <b>ogni ora</b> gli annunci disponibili, riceverai solo gli annunci che rispettano i tuoi parametri 🥳
+                    Il nostro servizio controlla <b>ogni ora</b> gli annunci disponibili, riceverai solo gli annunci che rispettano i tuoi parametri
+                    🥳
                   </p>
                 </div>
               </div>
             </article>
           </div>
           <div style={{ marginLeft: "auto" }}>
-            <Image src={"/screenshot.webp"} quality={100} alt="screenshot of telegram chat" width={800} height={800} layout="intrinsic" objectFit="cover" />
+            <Image
+              src={"/screenshot.webp"}
+              quality={100}
+              alt="screenshot of telegram chat"
+              width={800}
+              height={800}
+              layout="intrinsic"
+              objectFit="cover"
+            />
           </div>
         </div>
 
@@ -139,20 +157,20 @@ export default function Home({ cities }) {
             </div>
 
             <h4>Parole chiave</h4>
-            <TagsInput value={queryFields.includeWords} onChange={handleChangeInclude} name="includeKeywords" placeHolder="include solo annunci con queste parole" />
-            <TagsInput value={queryFields.excludeWords} onChange={handleChangeExclude} name="excludeKeywords" placeHolder="esclude annunci con queste parole" />
+            <InputTag className="block" onChange={handleChangeInclude} type="search" placeholder="includi solo annunci con queste parole" />
+            <InputTag className="block" onChange={handleChangeExclude} type="search" placeholder="escludi annunci con queste parole" />
 
             <div className="block has-text-centered py-4">
               {queryString.errors.length > 0 ? (
                 <p>{queryString.errors}</p>
               ) : (
-                <div>
-                  <code className="p-4">
+                <div className="is-flex is-justify-content-center is-align-items-center">
+                  <code className="p-4" style={{ border: "2px solid black" }}>
                     {queryString.success}
-                    <CopyToClipboard className="ml-4" text={queryString.success}>
-                      <button>Copia</button>
-                    </CopyToClipboard>
                   </code>
+                  <CopyToClipboard className="ml-4 button is-link is-normal is-responsive" text={queryString.success}>
+                    <button className="">Copia</button>
+                  </CopyToClipboard>
                 </div>
               )}
             </div>

@@ -4,8 +4,6 @@ $lg: 200px;
 $xlg: 1400px;
 $xxlg: 2000px;
 
-$border-radius: 20px;
-
 $white: hsl(0, 0%, 100%);
 $black-bis: hsl(0, 0%, 7%);
 $black-ter: hsl(0, 0%, 14%);
@@ -19,4 +17,35 @@ $white-bis: hsl(0, 0%, 98%);
 $red: hsl(348, 100%, 61%);
 $blue: hsl(204, 86%, 53%);
 $blue-dark: hsl(217, 71%, 53%);
-$blue-darker: hsl(211, 96%, 11%);
+$blue-darker: hsl(210, 100%, 23%);
+$blue-darkest: hsl(211, 96%, 11%);
+
+// <---------- overriding Bulma ---------->
+
+// $container-max-width: 1040px;
+
+$radius-small: 4px;
+$radius: 10px;
+$radius-large: 20px;
+
+$navbar-background-color: $blue-darker;
+
+$box-background-color: $blue-darker;
+$box-radius: $radius-large;
+$box-color: $white;
+$box-padding: 5vw;
+
+$title-color: $white;
+
+$input-radius: 8px;
+$input-background-color: $white-ter;
+$input-placeholder-color: $grey;
+
+$message-radius: $radius-large;
+$message-body-radius: $radius-large;
+
+// <---------- InputTag component ---------->
+$input-tag-color: $white;
+$input-tag-background-color: $blue-dark;
+$input-tag-background-color: $blue-dark;
+$input-tag-font-size: 13px;
