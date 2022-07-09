@@ -73,7 +73,7 @@ export default function Home({ cities }) {
                     <a target="_blank" rel="noreferrer" href={"https://t.me/house_finder_italy_bot"}>
                       Bot Telegram
                     </a>{" "}
-                    inserisci i filtri di prezzo, metri, parole chiave e woila&apos;! Riceverai una notifica su Telegram ogni volta che un annuncio viene pubblicato 🥰
+                    inserisci i filtri di prezzo, metri, parole chiave e voilà! Riceverai una notifica su Telegram ogni volta che un annuncio viene pubblicato 🥰
                   </p>
                 </div>
               </div>
