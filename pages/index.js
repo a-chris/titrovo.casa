@@ -4,6 +4,7 @@ import Script from "next/script";
 import { useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { TagsInput } from "react-tag-input-component";
+import { APP_NAME } from "../data/constants";
 import getCities from "../lib/cities";
 import { calculateQuery } from "../lib/query";
 
@@ -33,19 +34,19 @@ export default function Home({ cities }) {
   return (
     <div id="root">
       <Head>
-        <title>House Finder 🏡</title>
-        <meta name="description" content="House Finder" />
+        <title>{APP_NAME} 🏡</title>
+        <meta name="description" content={APP_NAME} />
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏡</text></svg>"></link>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css?family=Open%20Sans:400|Open%20Sans:400&display=swap" rel="stylesheet"></link>
       </Head>
 
-      <Script defer data-domain="titrovo.casa" src="https://faenz.onrender.com/faenz.js" />
+      <Script defer data-domain={APP_NAME} src="https://faenz.onrender.com/faenz.js" />
 
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand px-4">
-          <h1 className="title p-3">House Finder 🏡</h1>
+          <h1 className="title p-3">{APP_NAME} 🏡</h1>
         </div>
       </nav>
 
